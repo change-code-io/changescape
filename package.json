@@ -1,0 +1,10 @@
+{
+	"type": "module",
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"viem": "^2.17.5"
+	},
+	"scripts": {
+		"manager": "node script/changescape_manager-proto.js"
+	}
+}
