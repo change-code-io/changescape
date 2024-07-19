@@ -6,7 +6,6 @@ import "@openzeppelin-contracts-5.0.2/token/ERC20/extensions/ERC20Capped.sol";
 import "@openzeppelin-contracts-5.0.2/token/ERC20/extensions/ERC20Burnable.sol";
 
 contract IOU_proto is ERC20Capped, ERC20Burnable {
-
     address public owner;
 
     constructor(uint256 cap) ERC20("CC IOU | Prototype 001", "CC-IOU-Pro-001") ERC20Capped(cap) {
