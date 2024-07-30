@@ -5,6 +5,8 @@
 		"viem": "^2.17.5"
 	},
 	"scripts": {
-		"manager": "node script/changescape_manager-proto.js"
+		"initialize": "node script/changescape_manager-proto.js",
+		"deploy-ious": "node script/IOU_deploy-proto.js",
+		"mint-ious": "node script/IOU_mint-proto.js"
 	}
 }

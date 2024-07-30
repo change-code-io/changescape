@@ -25,29 +25,4 @@ const contractArtifact = JSON.parse(readFileSync(join(__dirname, '../out/IOU_pro
 const abi = contractArtifact.abi
 const bytecode = contractArtifact.bytecode.object
 
-// chain connection check (public)
-const blockNumber = await client.getBlockNumber()
-console.log('Current block number:', blockNumber)
-
-// Deploy contract
-async function deployContract() {
-  try {
-    const cap = 1000000n
-    const hash = await client.deployContract({
-      abi,
-      bytecode,
-      account,
-      args: [cap],
-    })
-    console.log('Deployment transaction hash:', hash)
-    
-    // Wait for the transaction to be mined
-    const receipt = await client.waitForTransactionReceipt({ hash })
-    console.log('Contract deployed at:', receipt.contractAddress)
-  } catch (error) {
-    console.error('Deployment failed:', error)
-  }
-}
-
-// Run deployment
-deployContract()
+export { client, abi, bytecode }
